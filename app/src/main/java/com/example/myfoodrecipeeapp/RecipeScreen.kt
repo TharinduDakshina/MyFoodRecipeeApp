@@ -21,7 +21,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
 
@@ -63,7 +65,7 @@ fun CategoryItem(category: Category) {
             .fillMaxSize()
             .padding(8.dp)
             .background(Color.Gray)
-            .border(width = 2.dp, color = Color.Yellow, shape = RectangleShape),
+            .border(width = 4.dp, color = Color.White, shape = RectangleShape),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -78,9 +80,10 @@ fun CategoryItem(category: Category) {
 
         Text(
             text = category.strCategory,
-            color = Color.White,
+            color = Color.Black,
             style = TextStyle(fontWeight = FontWeight.Bold),
-            modifier = Modifier.padding(top = 4.dp)
+            modifier = Modifier.padding(bottom = 8.dp),
+            fontSize = 20.sp
         )
 
     }
